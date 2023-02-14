@@ -1,0 +1,13 @@
+<h3>Search Results</h3>
+
+<ul>
+  {% if result %}
+    {% for a in result %}
+      <li>
+        {{ a.question_text }}, {{ a.pub_date |date }}
+      </li>
+    {% endfor %}
+  {% else %}
+    <p>Not found</p>
+  {% endif %}
+</ul>
